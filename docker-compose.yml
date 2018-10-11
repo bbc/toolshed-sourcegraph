@@ -9,3 +9,4 @@ services:
     volumes:
       - ./data/sourcegraph/config:/etc/sourcegraph
       - ./data/sourcegraph/data:/var/opt/sourcegraph
+    network_mode: bridge
