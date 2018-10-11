@@ -5,7 +5,7 @@ services:
   sourcegraph:
     image: sourcegraph/server:2.8.0
     ports:
-      - '7080:7080' 
+      - '7080' 
     volumes:
       - ./data/sourcegraph/config:/etc/sourcegraph
       - ./data/sourcegraph/data:/var/opt/sourcegraph
