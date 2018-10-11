@@ -5,8 +5,10 @@ services:
   sourcegraph:
     image: sourcegraph/server:2.8.0
     ports:
-      - '7080:80' 
+      - '7080' 
     volumes:
       - ./data/sourcegraph/config:/etc/sourcegraph
       - ./data/sourcegraph/data:/var/opt/sourcegraph
+    environment:
+      - VIRTUAL_HOST=sourcegraph
     network_mode: bridge
